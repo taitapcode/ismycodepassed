@@ -5,7 +5,9 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <TitleBar />
-      <Outlet />
+      <div className='p-2'>
+        <Outlet />
+      </div>
     </>
   ),
 });
