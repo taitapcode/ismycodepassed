@@ -1,11 +1,13 @@
 import { createRoot } from 'react-dom/client';
 import 'index.css';
-import App from 'App';
-import TitleBar from 'components/TitleBar';
+import { RouterProvider, createRouter } from '@tanstack/react-router';
+import { routeTree } from './routeTree.gen';
 
-createRoot(document.getElementById('app')!).render(
-  <>
-    <TitleBar />
-    <App />
-  </>,
-);
+const router = createRouter({ routeTree });
+createRoot(document.getElementById('app')!).render(<RouterProvider router={router} />);
+
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router;
+  }
+}

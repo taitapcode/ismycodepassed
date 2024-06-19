@@ -1,5 +1,5 @@
 [package]
-name = "plzmycodepass"
+name = "ismycodepassed"
 version = "0.0.0"
 description = "A Tauri App"
 authors = ["you"]
