@@ -6,9 +6,7 @@ const Root: React.FC = () => {
   return (
     <>
       <TitleBar />
-      <div className='p-2'>
-        <Outlet />
-      </div>
+      <Outlet />
       <ReactQueryDevtools />
     </>
   );

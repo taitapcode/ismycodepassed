@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply select-none;
+}
+
+#app {
+  @apply h-screen;
+}
+
 input {
   all: unset;
+}
+
+input::-webkit-textfield-decoration-container {
+  @apply cursor-pointer;
 }

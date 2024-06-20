@@ -10,14 +10,14 @@ const SearchInput: React.FC = () => {
 
   return (
     <div
-      className='flex w-full items-center gap-2 rounded-2xl border-2 border-slate-800 p-3'
+      className='input input-bordered flex w-full cursor-text items-center gap-2'
       onClick={handleClick}
     >
-      <SearchIcon strokeWidth={3} className='text-slate-700' />
+      <SearchIcon strokeWidth={2} className='' />
       <input
         type='search'
         placeholder='Enter project name'
-        className='w-[95%] text-lg text-gray-900'
+        className='grow'
         ref={inputRef}
       />
     </div>
