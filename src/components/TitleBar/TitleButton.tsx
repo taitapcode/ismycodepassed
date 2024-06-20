@@ -11,12 +11,16 @@ const TitleButton: React.FC<TitleButtonProps> = ({ icon: Icon, className, onClic
   return (
     <button
       className={cn(
-        'rounded-full size-[18px] flex justify-center items-center group',
+        'group flex size-[18px] items-center justify-center rounded-full',
         className,
       )}
       onClick={onClick}
     >
-      <Icon className='opacity-0 group-hover:opacity-100 transition-opacity' size={15} />
+      <Icon
+        className='opacity-0 transition-opacity group-hover:opacity-100'
+        strokeWidth={3}
+        size={15}
+      />
     </button>
   );
 };

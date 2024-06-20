@@ -8,7 +8,7 @@ const TitleBar: React.FC = () => {
   return (
     <div
       data-tauri-drag-region
-      className='h-9 flex justify-between items-center gap-2 p-2 shadow-lg bg-gray-800 select-none'
+      className='flex h-11 items-center justify-between gap-2 bg-gray-900 p-2 shadow-lg'
     >
       <WindowTitle />
       <div className='flex items-center gap-2'>

@@ -1,6 +1,6 @@
 const WindowTitle: React.FC = () => {
   return (
-    <div className='text-white font-bold pointer-events-none w-full text-center'>
+    <div className='pointer-events-none w-full text-center font-bold text-white'>
       {document.title}
     </div>
   );
