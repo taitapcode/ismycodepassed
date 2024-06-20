@@ -26,6 +26,13 @@
         "unmaximize": false,
         "unminimize": true,
         "startDragging": true
+      },
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "scope": ["$APPDATA/*"],
+        "all": true
       }
     },
     "windows": [
@@ -45,7 +52,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "ismycodepassed",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",

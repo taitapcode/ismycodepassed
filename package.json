@@ -10,6 +10,7 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.45.1",
     "@tanstack/react-router": "^1.39.4",
     "@tauri-apps/api": "^1",
     "clsx": "^2.1.1",
@@ -19,6 +20,7 @@
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.45.1",
     "@tanstack/router-vite-plugin": "^1.39.3",
     "@tauri-apps/cli": "^1",
     "@types/react": "^18.2.15",
