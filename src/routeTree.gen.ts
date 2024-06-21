@@ -13,7 +13,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as LayoutImport } from './routes/_layout'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
-import { Route as LayoutAddnewImport } from './routes/_layout/addnew'
+import { Route as LayoutNewprojectImport } from './routes/_layout/newproject'
 
 // Create/Update Routes
 
@@ -27,8 +27,8 @@ const LayoutIndexRoute = LayoutIndexImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
-const LayoutAddnewRoute = LayoutAddnewImport.update({
-  path: '/addnew',
+const LayoutNewprojectRoute = LayoutNewprojectImport.update({
+  path: '/newproject',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -43,11 +43,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutImport
       parentRoute: typeof rootRoute
     }
-    '/_layout/addnew': {
-      id: '/_layout/addnew'
-      path: '/addnew'
-      fullPath: '/addnew'
-      preLoaderRoute: typeof LayoutAddnewImport
+    '/_layout/newproject': {
+      id: '/_layout/newproject'
+      path: '/newproject'
+      fullPath: '/newproject'
+      preLoaderRoute: typeof LayoutNewprojectImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/': {
@@ -63,7 +63,10 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export const routeTree = rootRoute.addChildren({
-  LayoutRoute: LayoutRoute.addChildren({ LayoutAddnewRoute, LayoutIndexRoute }),
+  LayoutRoute: LayoutRoute.addChildren({
+    LayoutNewprojectRoute,
+    LayoutIndexRoute,
+  }),
 })
 
 /* prettier-ignore-end */
@@ -80,12 +83,12 @@ export const routeTree = rootRoute.addChildren({
     "/_layout": {
       "filePath": "_layout.tsx",
       "children": [
-        "/_layout/addnew",
+        "/_layout/newproject",
         "/_layout/"
       ]
     },
-    "/_layout/addnew": {
-      "filePath": "_layout/addnew.tsx",
+    "/_layout/newproject": {
+      "filePath": "_layout/newproject.tsx",
       "parent": "/_layout"
     },
     "/_layout/": {
