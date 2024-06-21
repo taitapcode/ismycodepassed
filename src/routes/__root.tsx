@@ -1,5 +1,4 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import TitleBar from 'components/TitleBar';
 
 const Root: React.FC = () => {
@@ -7,7 +6,6 @@ const Root: React.FC = () => {
     <>
       <TitleBar />
       <Outlet />
-      <ReactQueryDevtools />
     </>
   );
 };

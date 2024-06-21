@@ -1,39 +1,27 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { Link, createFileRoute } from '@tanstack/react-router';
+import { useAppDataDir } from 'hooks';
 import setWindowTitle from 'utils/setWindowTitle';
-import { useQuery } from '@tanstack/react-query';
-import { readProjectFolders } from 'api/fileSystem';
-import { Switch, Case, Default } from 'react-if';
 import SearchInput from 'components/SearchInput';
+import { Unless } from 'react-if';
+import { Plus } from 'lucide-react';
 
 const Home: React.FC = () => {
-  const { isLoading, isError } = useQuery({
-    queryKey: ['projectFolders'],
-    queryFn: readProjectFolders,
-  });
+  const projectEntry = useAppDataDir('projects');
 
   return (
     <main className='mx-auto my-10 flex w-[40rem] flex-col items-center gap-4'>
       <SearchInput />
-      <Switch>
-        <Case condition={isLoading}>
-          <div className='flex h-[50vh] w-full items-center justify-center'>
-            <div className='loading size-20'></div>
-          </div>
-        </Case>
-
-        <Case condition={isError}>
-          <div className='font-bold text-red-500'>Errorororororor</div>
-        </Case>
-
-        <Default>
-          <button>Hello world</button>
-        </Default>
-      </Switch>
+      <Unless condition={projectEntry.length}>
+        <Link className='btn btn-success'>
+          <Plus strokeWidth={3} />
+          Create new porject
+        </Link>
+      </Unless>
     </main>
   );
 };
 
 export const Route = createFileRoute('/')({
-  beforeLoad: () => setWindowTitle('Home'),
+  beforeLoad: () => setWindowTitle('Projects'),
   component: Home,
 });
