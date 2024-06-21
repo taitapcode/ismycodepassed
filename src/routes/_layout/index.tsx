@@ -21,7 +21,7 @@ const Home: React.FC = () => {
   );
 };
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute('/_layout/')({
   beforeLoad: () => setWindowTitle('Projects'),
   component: Home,
 });

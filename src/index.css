@@ -7,7 +7,7 @@ html {
 }
 
 #app {
-  @apply h-screen;
+  @apply h-screen overflow-hidden;
 }
 
 input {
