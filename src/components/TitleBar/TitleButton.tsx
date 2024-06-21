@@ -1,11 +1,11 @@
 import type { LucideIcon } from 'lucide-react';
 import cn from 'utils/cn';
 
-type TitleButtonProps = {
+interface TitleButtonProps {
   icon: LucideIcon;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-};
+}
 
 const TitleButton: React.FC<TitleButtonProps> = ({ icon: Icon, className, onClick }) => {
   return (

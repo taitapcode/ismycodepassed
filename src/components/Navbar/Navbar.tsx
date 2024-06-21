@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
         <CirclePlus strokeWidth={2} />
         Create new project
       </Link>
-      <Link className='btn btn-ghost' to='/'>
+      <Link className='btn btn-outline border-2' to='/'>
         <Folders strokeWidth={2} />
         Projects
       </Link>
