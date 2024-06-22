@@ -11,13 +11,7 @@ edition = "2021"
 tauri-build = { version = "1", features = [] }
 
 [dependencies]
-tauri = { version = "1", features = [ "fs-all", "path-all",
-  "window-minimize",
-  "window-unminimize",
-  "window-close",
-  "window-start-dragging",
-  "window-show",
-  "window-hide",
+tauri = { version = "1", features = [ "window-all", "fs-all", "path-all",
   "shell-open",
 ] }
 serde = { version = "1", features = ["derive"] }

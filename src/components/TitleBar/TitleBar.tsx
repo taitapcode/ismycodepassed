@@ -1,8 +1,7 @@
 import { appWindow } from '@tauri-apps/api/window';
 import TitleButton from './TitleButton';
 import WindowTitle from './WindowTitle';
-import { Minus } from 'lucide-react';
-import { X } from 'lucide-react';
+import { Minus, Maximize2, X } from 'lucide-react';
 
 const TitleBar: React.FC = () => {
   return (
@@ -14,14 +13,15 @@ const TitleBar: React.FC = () => {
       <div className='flex items-center gap-2'>
         <TitleButton
           icon={Minus}
-          className='bg-warning text-warning-content'
+          className='bg-yellow-300'
           onClick={() => appWindow.minimize()}
         />
         <TitleButton
-          icon={X}
-          className='bg-error text-error-content'
-          onClick={() => appWindow.close()}
+          icon={Maximize2}
+          className='bg-green-400'
+          onClick={() => appWindow.toggleMaximize()}
         />
+        <TitleButton icon={X} className='bg-rose-500' onClick={() => appWindow.close()} />
       </div>
     </div>
   );

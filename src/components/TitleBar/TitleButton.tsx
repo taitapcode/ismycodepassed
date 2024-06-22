@@ -17,9 +17,9 @@ const TitleButton: React.FC<TitleButtonProps> = ({ icon: Icon, className, onClic
       onClick={onClick}
     >
       <Icon
-        className='opacity-0 transition-opacity group-hover:opacity-100'
+        className='text-black/70 opacity-0 transition-opacity group-hover:opacity-100'
         strokeWidth={3}
-        size={15}
+        size={13}
       />
     </button>
   );

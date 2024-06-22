@@ -17,15 +17,7 @@
         "open": true
       },
       "window": {
-        "all": false,
-        "close": true,
-        "hide": true,
-        "show": true,
-        "maximize": false,
-        "minimize": true,
-        "unmaximize": false,
-        "unminimize": true,
-        "startDragging": true
+        "all": true
       },
       "path": {
         "all": true
@@ -38,11 +30,9 @@
     "windows": [
       {
         "title": "testmycode",
-        "width": 1480,
-        "height": 820,
+        "minWidth": 1480,
+        "minHeight": 820,
         "decorations": false,
-        "resizable": false,
-        "maximizable": false,
         "center": true
       }
     ],

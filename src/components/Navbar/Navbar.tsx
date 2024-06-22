@@ -1,17 +1,13 @@
-import { Link } from '@tanstack/react-router';
 import { CirclePlus, Folders } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className='flex min-w-56 flex-col gap-4 bg-base-200 px-4 py-10'>
-      <Link className='btn btn-success' to='/newproject'>
+    <nav className='flex min-w-[15%] flex-col gap-4 bg-base-200 px-4 py-10'>
+      <button className='btn btn-success'>
         <CirclePlus strokeWidth={2} />
         Create new project
-      </Link>
-      <Link className='btn btn-outline border-2' to='/'>
-        <Folders strokeWidth={2} />
-        Projects
-      </Link>
+      </button>
+      <div className='divider pointer-events-none'>Projects</div>
     </nav>
   );
 };

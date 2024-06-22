@@ -4,14 +4,10 @@ import { SearchIcon } from 'lucide-react';
 const SearchInput: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleClick: React.MouseEventHandler = () => {
-    inputRef.current?.focus();
-  };
-
   return (
     <div
       className='input input-bordered flex w-full cursor-text items-center gap-2'
-      onClick={handleClick}
+      onClick={() => inputRef.current?.focus()}
     >
       <SearchIcon strokeWidth={2} className='' />
       <input
