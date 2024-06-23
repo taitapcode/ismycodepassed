@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   return (
     <div className='flex h-full gap-2'>
       <Navbar />
-      <main className='mx-auto my-10 flex w-[40rem] flex-col items-center gap-4'>
+      <div className='mx-auto my-10 flex w-[40rem] flex-col items-center gap-4'>
         <SearchInput />
         <Unless condition={projectEntries.length}>
           <Link className='btn btn-success'>
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
             Create new porject
           </Link>
         </Unless>
-      </main>
+      </div>
     </div>
   );
 };
