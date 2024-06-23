@@ -6,10 +6,10 @@ const SearchInput: React.FC = () => {
 
   return (
     <div
-      className='input input-bordered flex w-full cursor-text items-center gap-2'
+      className='flex w-full cursor-text items-center gap-2 rounded-lg border-2 border-neutral p-3 focus-within:border-neutral-content'
       onClick={() => inputRef.current?.focus()}
     >
-      <SearchIcon strokeWidth={2} className='' />
+      <SearchIcon strokeWidth={2} className='pointer-events-none' />
       <input
         type='search'
         placeholder='Enter project name'

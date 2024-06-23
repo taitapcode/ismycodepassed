@@ -5,9 +5,9 @@ const Root: React.FC = () => {
   return (
     <>
       <TitleBar />
-      <main className='mt-9'>
+      <div className='mt-9 h-full'>
         <Outlet />
-      </main>
+      </div>
     </>
   );
 };

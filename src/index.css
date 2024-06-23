@@ -1,17 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+  cursor: default;
+}
 
-html {
-  @apply select-none;
+input,
+textarea {
+  cursor: text !important;
+}
+
+button {
+  cursor: pointer !important;
 }
 
 #app {
-  @apply h-screen overflow-hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  user-select: none;
 }
 
 main {
-  @apply h-full overflow-y-auto overflow-x-hidden;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 input {
@@ -19,5 +31,9 @@ input {
 }
 
 input::-webkit-textfield-decoration-container {
-  @apply cursor-pointer;
+  cursor: pointer;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
