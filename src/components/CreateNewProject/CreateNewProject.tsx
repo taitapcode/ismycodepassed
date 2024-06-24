@@ -20,6 +20,8 @@ const CreateNewProject: React.FC = () => {
     console.log(isError);
     clearError();
     if (!projectName) return setError('Project name cannot be empty');
+
+    setModalOpen(false);
   };
 
   useEffect(() => {
